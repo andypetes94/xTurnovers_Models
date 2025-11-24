@@ -1,0 +1,4 @@
+"Model","penalty","mixture",".config","mtry","min_n","tree_depth","learn_rate","loss_reduction","sample_size"
+"Penalised logistic (glmnet)",0.00069519279617756,0.4,"pre0_mod14_post0",NA,NA,NA,NA,NA,NA
+"Random forest (ranger)",NA,NA,"pre0_mod10_post0",6,22,NA,NA,NA,NA
+"Gradient boosting (xgboost)",NA,NA,"pre0_mod04_post0",NA,8,14,0.0206913808111479,4.2813323987194e-07,0.857894736842105

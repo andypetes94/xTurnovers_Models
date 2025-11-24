@@ -1,0 +1,53 @@
+--------------------------------------
+Running turnover pipeline (macOS overnight-safe)
+Input dataset : ../sample_data/initial_data.subset.all.csv
+Output folder : output_alt
+Model type    : alt
+Skip SHAP     : false
+Skip PDP      : false
+Log file      : output_alt/run_log_20251124_083618.txt
+--------------------------------------
+=== START: TURNOVER PIPELINE ===
+Using 2 parallel workers.
+Model type: alt 
+Total observations: 256433 
+
+     0      1 
+214823  41610 
+subsample_for_glmer: total n = 256433 → sampling ~ 40000 rows for glmer (≈ 20000 per class).
+Number of unique match_id : 320 
+Using v = 5 grouped CV by match_id 
+Number of unique match_id : 320 
+Using v = 3 grouped CV by match_id 
+Fitting glmer fold 1 ...
+Setting levels: control = 0, case = 1
+Setting direction: controls < cases
+Fitting glmer fold 2 ...
+Fitting glmer fold 3 ...
+Setting levels: control = 0, case = 1
+Setting direction: controls < cases
+Setting levels: control = 0, case = 1
+Setting direction: controls < cases
+Final predictors after preprocessing (RF): 12 
+Fitting final RF and XGB models on full dataset...
+Final models fitted and stored in results object.
+Saved model suite to: output_alt/turnover_results_alt.rds 
+Saved model comparison metrics to: output_alt/model_comparison_metrics_alt.csv 
+Saved model best hyperparameters to: output_alt/model_best_hyperparameters_alt.csv 
+Turnover pipeline completed successfully (model: alt ).
+=== START: EVALUATION SUITE ===
+Running evaluation suite with: Rscript --vanilla turnover_evaluation_suite.R         --input 'output_alt/turnover_results_alt.rds'         --output 'output_alt'
+Using 2 parallel workers.
+✅ Using existing fitted models from results object...
+Saving 7 x 7 in image
+Saved SHAP plot object to: output_alt/xgb_shap_plot.rds 
+Saving 7 x 7 in image
+Saved PDP plot object to: output_alt/xgb_pdp_plot.rds 
+✅ Evaluation suite completed. Outputs saved to: output_alt 
+=======================================
+ TURNOVER PIPELINE SUCCESSFULLY FINISHED
+=======================================
+Model      : alt
+Output dir : output_alt
+SHAP       : false
+PDP        : false

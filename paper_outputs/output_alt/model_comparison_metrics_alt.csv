@@ -1,0 +1,5 @@
+"Model","roc_auc","accuracy","sens","spec","f_meas","brier_class"
+"Mixed-effects logistic (glmer)",0.707,0.648,0.627,0.669,0.641,0.218
+"Penalised logistic (glmnet)",0.69,0.837,0.993,0.03,0.911,0.127
+"Random forest (ranger)",0.737,0.843,0.987,0.1,0.913,0.12
+"Gradient boosting (xgboost)",0.742,0.843,0.983,0.123,0.913,0.119
