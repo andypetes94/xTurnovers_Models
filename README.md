@@ -10,7 +10,7 @@
 
 This repository provides the **fully reproducible analytical pipeline** used in the study:
 
-> **“Data Leakage and Predictive Validity in Machine Learning Models of Pass Turnovers” (Peters et al., 2025)**
+> **“Data Leakage and Predictive Validity in Machine Learning Models of Pass Turnovers” (Peters et al., Under Review)**
 
 The project extends the *Expected Pass Turnovers (xPT)* framework to evaluate the impact of **data leakage** and **temporal validity** in football turnover prediction models.
 
@@ -105,7 +105,7 @@ To reproduce analysis on the provided dataset:
 
 If you use this repository, please cite:
 
-**Peters, A., Parmar, N., Davies, M., & James, N. (Pending Publication).**
+**Peters, A., Parmar, N., Davies, M., & James, N. (Under Review).**
 *Data Leakage and Predictive Validity in Machine Learning Models of Pass Turnovers.*
 *Journal of Sports Sciences.*
 
