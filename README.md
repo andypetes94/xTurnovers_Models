@@ -77,12 +77,12 @@ To reproduce analysis on the provided dataset:
 
 ## 📊 Model Performance Summary
 
-| Algorithm              | Default AUC | Leakage-Corrected AUC | ΔAUC   | Notes                   |
-| ---------------------- | ----------- | --------------------- | ------ | ----------------------- |
-| Mixed-effects logistic | 0.789       | 0.707                 | -0.082 | Interpretability        |
-| Penalised logistic     | 0.786       | 0.690                 | -0.096 | Regularized             |
-| Random forest          | 0.920       | 0.737                 | -0.183 | High leakage dependence |
-| Gradient boosting      | 0.924       | 0.742                 | -0.182 | Best overall balance    |
+| Algorithm              | Default AUC | Leakage-Corrected AUC | ΔAUC   |
+| ---------------------- | ----------- | --------------------- | ------ |
+| Mixed-effects logistic | 0.789       | 0.707                 | -0.082 |
+| Penalised logistic     | 0.786       | 0.690                 | -0.096 |
+| Random forest          | 0.920       | 0.737                 | -0.183 |
+| Gradient boosting      | 0.924       | 0.742                 | -0.182 |
 
 ---
 
