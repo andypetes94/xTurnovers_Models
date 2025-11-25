@@ -22,7 +22,7 @@ The Expected Pass Turnovers (xPT) model quantifies possession loss probability i
 
 ---
 
-## Results Visualization
+## Results Visualisation
 
 ### Model Comparison: Default vs. Alternative Models
 
@@ -115,7 +115,9 @@ install.packages(c("doParallel", "foreach"))
 
 Run the complete pipeline using the shell orchestrator:
 
-bash run_machine_learning_pipeline.sh
+```bash
+bash run_machine_learning_pipeline.sh <dataset> <default>
+```
 
 This executes both **default** (leakage-inclusive) and **alternative** (leakage-corrected) model training and evaluation workflows in parallel.
 
@@ -127,13 +129,10 @@ Controls parallel execution of default and alternative model pipelines:
 
 ```bash
 # Run default models only
-Rscript turnover_pipeline_run.R default
+Rscript turnover_pipeline_run.R sample_data.csv default
 
 # Run alternative models only
-Rscript turnover_pipeline_run.R alternative
-
-# Run both (parallel execution)
-bash run_machine_learning_pipeline.sh
+Rscript turnover_pipeline_run.R sample_data.csv alternative
 ```
 
 #### 2. R Driver Script (turnover_pipeline_run.R)
