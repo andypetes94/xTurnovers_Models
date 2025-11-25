@@ -116,7 +116,7 @@ install.packages(c("doParallel", "foreach"))
 Run the complete pipeline using the shell orchestrator:
 
 ```bash
-bash run_machine_learning_pipeline.sh <dataset> <default>
+bash run_machine_learning_pipeline.sh <dataset> <default/alt>
 ```
 
 This executes both **default** (leakage-inclusive) and **alternative** (leakage-corrected) model training and evaluation workflows in parallel.
@@ -132,7 +132,7 @@ Controls parallel execution of default and alternative model pipelines:
 Rscript turnover_pipeline_run.R sample_data.csv default
 
 # Run alternative models only
-Rscript turnover_pipeline_run.R sample_data.csv alternative
+Rscript turnover_pipeline_run.R sample_data.csv alt
 ```
 
 #### 2. R Driver Script (turnover_pipeline_run.R)
