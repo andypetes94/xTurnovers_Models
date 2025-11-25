@@ -282,8 +282,8 @@ If you use this code or adapt the methodology, please cite:
 
 ### Computational Environment
 
-- **Platform:** Ubuntu 20.04 LTS (Linux kernel 5.15)
-- **R version:** 4.3.2
+- **Platform:** Mac OS
+- **R version:** 4.5.1
 - **Hardware:** 16 GB RAM, 8-core CPU recommended for full dataset
 - **Runtime:** ~2–4 hours for complete pipeline (sample data: ~10 minutes)
 
@@ -297,7 +297,7 @@ All stochastic processes (CV splits, bootstrapping, tree-based models) use fixed
 
 - **Sample data:** Synthetic dataset approximates real statistics but lacks true match dynamics
 - **Scalability:** Full 256,433-pass dataset requires high-performance computing infrastructure
-- **Hyperparameter grids:** Tuning ranges optimized for computational efficiency (expand for production)
+- **Hyperparameter grids:** Tuning ranges optimised for computational efficiency (expand for production)
 
 ---
 
