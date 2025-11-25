@@ -53,6 +53,7 @@ The Expected Pass Turnovers (xPT) model quantifies possession loss probability i
 
 ## Repository Structure
 
+```
 .
 ├── run_machine_learning_pipeline.sh    # Shell orchestrator (main entry point)
 ├── turnover_pipeline_run.R             # R driver script
@@ -78,6 +79,7 @@ The Expected Pass Turnovers (xPT) model quantifies possession loss probability i
     │   └── pdp_features.jpg
     └── output_alt/                     # Alternative model outputs
         └── [same structure as output_default/]
+```
 
 ---
 
@@ -123,6 +125,7 @@ This executes both **default** (leakage-inclusive) and **alternative** (leakage-
 
 Controls parallel execution of default and alternative model pipelines:
 
+```bash
 # Run default models only
 Rscript turnover_pipeline_run.R default
 
@@ -131,6 +134,7 @@ Rscript turnover_pipeline_run.R alternative
 
 # Run both (parallel execution)
 bash run_machine_learning_pipeline.sh
+```
 
 #### 2. R Driver Script (turnover_pipeline_run.R)
 
@@ -207,15 +211,16 @@ A synthetic dataset (sample_data/sample_data.csv) with 5,000 passes is provided 
 
 **model_best_hyperparameters.csv** documents tuned parameters:
 
-model,hyperparameter,value
-glmer,optimizer,bobyqa
-glmnet,alpha,0.5
-glmnet,lambda,0.001
-ranger,mtry,8
-ranger,min.node.size,10
-xgboost,max_depth,6
-xgboost,eta,0.1
-xgboost,nrounds,150
+| Model | Hyperparameter | Value |
+|-------|----------------|-------|
+| glmer | optimizer | bobyqa |
+| glmnet | alpha | 0.5 |
+| glmnet | lambda | 0.001 |
+| ranger | mtry | 8 |
+| ranger | min.node.size | 10 |
+| xgboost | max_depth | 6 |
+| xgboost | eta | 0.1 |
+| xgboost | nrounds | 150 |
 
 ### Diagnostic Figures
 
@@ -262,12 +267,14 @@ Shell orchestrator runs default and alternative pipelines concurrently, reducing
 
 If you use this code or adapt the methodology, please cite:
 
+```
 @article{peters2025timing,
   title={When Timing Matters: Evaluating Temporal Leakage in Machine Learning Models of Football Pass Turnovers},
   author={Peters, Andrew and Parmar, Nimai and Davies, Michael and James, Nic},
   journal={Under Review},
   year={2025}
 }
+```
 
 ---
 
