@@ -22,6 +22,35 @@ The Expected Pass Turnovers (xPT) model quantifies possession loss probability i
 
 ---
 
+## Results Visualization
+
+### Model Comparison: Default vs. Alternative Models
+
+![ROC Curves Comparison](figures/combined_auc_plot.png)
+*ROC curves comparing default (leakage-inclusive) and alternative (leakage-corrected) models across all four algorithms. Default models achieve superior discrimination (AUC 0.79-0.92) compared to alternative models (AUC 0.69-0.74).*
+
+### Feature Importance Analysis
+
+![SHAP Summary](figures/combined_shap.png)
+*SHAP summary plots reveal distinct feature reliance patterns. Default models (top) are dominated by post-pass descriptors (distance_ball_moved, pass_angle, ball_movement_speed), while alternative models (bottom) reorganize around pressing intensity and tactical context variables.*
+
+### Model Calibration
+
+![Calibration Curves](figures/combined_calibration_plot.png)
+*Calibration curves demonstrate probabilistic accuracy. Tree-based methods (random forest, gradient boosting) maintain strong calibration in both default and alternative configurations, with predicted probabilities closely matching observed turnover rates.*
+
+### Partial Dependence Relationships
+
+![Partial Dependence Plots](figures/combined_pdp.png)
+*Partial dependence plots illustrate marginal effects of key features. Pressing intensity variables exhibit nonlinear relationships with turnover probability, showing saturation effects beyond 2-4 opponents in proximity.*
+
+### Classification Performance
+
+![Confusion Matrices](figures/combined_confusion_matrix.png)
+*Confusion matrices at threshold = 0.5 comparing default (top) and alternative (bottom) models. Alternative models sacrifice some specificity but maintain high sensitivity for detecting risky passes.*
+
+---
+
 ## Repository Structure
 
 .
