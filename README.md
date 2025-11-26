@@ -129,10 +129,10 @@ Controls parallel execution of default and alternative model pipelines:
 
 ```bash
 # Run default models only
-Rscript turnover_pipeline_run.R sample_data.csv default
+./run_machine_learning_pipeline.sh  sample_data/sample_data.csv default
 
 # Run alternative models only
-Rscript turnover_pipeline_run.R sample_data.csv alt
+./run_machine_learning_pipeline.sh sample_data/sample_data.csv alt
 ```
 
 #### 2. R Driver Script (turnover_pipeline_run.R)
