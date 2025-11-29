@@ -129,7 +129,7 @@ Controls parallel execution of default and alternative model pipelines:
 
 ```bash
 # Run default models only
-./run_machine_learning_pipeline.sh  sample_data/sample_data.csv default
+./run_machine_learning_pipeline.sh sample_data/sample_data.csv default
 
 # Run alternative models only
 ./run_machine_learning_pipeline.sh sample_data/sample_data.csv alt
